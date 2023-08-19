@@ -19,3 +19,11 @@ resource "aws_route_table" "main" {
   }
 }
 
+
+output "subnets_id" {
+  value = aws_subnet.main
+}
+
+output "routetable_id" {
+  value = aws_route_table.main
+}
