@@ -9,8 +9,5 @@ module "subnets" {
 }
 
 output "subnet_main" {
-  value = module.subnets.subnet_id
-}
-output "routetable_id" {
-  value = module.subnets.routetable_id
+  value = module.subnets
 }
