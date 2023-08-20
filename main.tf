@@ -8,6 +8,3 @@ module "subnets" {
   vpc_id = aws_vpc.main.id
 }
 
-output "subnet_main" {
-  value = module.subnets
-}
