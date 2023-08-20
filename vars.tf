@@ -1,2 +1,3 @@
-variable "cidr" {}
+variable "vpc" {}
+variable "cidr"  {}
 variable "subnets" {}
