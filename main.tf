@@ -7,3 +7,10 @@ module "subnets" {
   subnets = each.value
   vpc_id = aws_vpc.main.id
 }
+
+output "subnet_main" {
+  value = module.subnets.subnet_id
+}
+output "routetable_id" {
+  value = module.subnets.routetable_id
+}
