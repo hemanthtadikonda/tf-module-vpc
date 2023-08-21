@@ -40,7 +40,7 @@ resource "aws_route" "ngw" {
   count                     = length(local.private_route_table_ids)
   route_table_id            = element(local.private_route_table_ids,count.index )
   destination_cidr_block    = var.cidr
-  nat_gateway_id            = element(aws_nat_gateway.ngw. * id ,count.index )
+  nat_gateway_id            = element(aws_nat_gateway.ngw, * id ,count.index )
 }
 
 resource "aws_vpc_peering_connection" "peering" {
