@@ -65,7 +65,9 @@ resource "aws_route" "default_vpc_peer_entry" {
   vpc_peering_connection_id = aws_vpc_peering_connection.peering.id
 }
 
-
+output "aws_vpc_id" {
+  value = aws_vpc.main.id
+}
 
 # resource "aws_eip" "ngw" {
 # for_each = lookup(lookup(module.subnets,"public", null), "subnet_ids" , null )
